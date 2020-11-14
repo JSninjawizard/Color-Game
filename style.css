@@ -1,0 +1,73 @@
+body{
+    background-color: #232323;
+    margin: 0;
+    font-family: "Montserrat", "Avenir";
+}
+
+#container { 
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.square {
+    width: 30%;
+    background-color: bisque;
+    padding-top: 30%;
+    margin: 1.66%;
+    float: left;
+    border-radius: 18px 6px 18px 6px;
+    transition: background 0.8s;
+}
+
+h1 {
+    color: whitesmoke;
+    text-align: center;
+    background-color: steelblue;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1.1;
+    padding: 20px 0;
+}
+
+.color2Guess {
+    font-size: 200%;
+}
+
+
+#stripe{
+    background-color:white;
+    height: 40px;
+    text-align: center;
+}
+
+.selected {
+    background-color: steelblue;
+    color: white;
+}
+
+button {
+    font-family: "Montserrat", "Avenir";
+    border-style: none;
+    background-color: white;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: 0.8s;
+    outline: none;
+}
+
+button:hover {
+    color: whitesmoke;
+    background-color: steelblue;
+}
+
+#rightOrWrong {
+    display: inline-block;
+    width: 30%;
+    color: steelblue;
+    font-weight: 600;
+}
