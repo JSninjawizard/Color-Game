@@ -1,10 +1,27 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.custom-cursor {
+    border: 1px solid;
+    height: 2rem;
+    width: 2rem;
+    background-color: antiquewhite;
+    position: fixed;
+    border-radius: 50%;
+}
+
 body{
     background-color: #232323;
     margin: 0;
     font-family: "Montserrat", "Avenir";
 }
 
-#container { 
+#container {
     max-width: 600px;
     margin: 20px auto;
 }
