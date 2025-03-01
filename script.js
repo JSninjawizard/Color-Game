@@ -49,17 +49,17 @@ buttonReset.addEventListener("click", function (){
 for (index = 0; index < colors.length; index++) {
     // -(2.3)-
     squares[index].style.backgroundColor = colors[index];
-    
+
 
     // (5) Adding Click Events:
     squares[index].addEventListener("click", function () {
         // -(5.1)- each color that user clicks gets a response
         // alert(`you clicked ${this.style.backgroundColor}`);
-        
+
         // -(5.2)- grab a color of clicked square
         let clickedSquare = this.style.backgroundColor
         console.log(`The Color You Clicked is: ${clickedSquare}`)
-        
+
         // -(5.3)- compare it to the color that is to be guessed
         if (clickedSquare === pickedColor) {
             // alert ("Correct!")
@@ -68,14 +68,14 @@ for (index = 0; index < colors.length; index++) {
             changeColor(clickedSquare)
             h1.style.backgroundColor = pickedColor
             buttonReset.textContent = "Play Again?"
-            
+
         } else {
             // alert("Wrong!")
 
             // (6) Adding Behaviour For Wrong Answers:
             // -(6.1)- wrong square changes to background color
             this.style.backgroundColor = "#232323";
-            
+
             // -(6.3)- display "Try Again"
             rightOrWrong.textContent = "Try Again"
         }
@@ -98,7 +98,7 @@ let pickedColor =  pickColor ();
 
 // (7) change the color of all squares and h1 to goal color
 function changeColor (color) {
-    // -(7.1)- Loop through all squares 
+    // -(7.1)- Loop through all squares
     for (let index = 0; index < squares.length; index++) {
 
         // -(7.2)- Change each color to match goal color
@@ -112,7 +112,7 @@ function pickColor () {
 }
 
 function generateRandomColors (num) {
-    // make an array 
+    // make an array
     let array = [];
     // repeat num times
     for (let i = 0; i < num; i++) {
@@ -142,7 +142,7 @@ easy.addEventListener("click", function() {
     easy.classList.add("selected");
     hard.classList.remove("selected");
     squaresNumber = 3;
-    
+
     // generate 3 random colors
     colors = generateRandomColors(squaresNumber);
     // Pick a new random color from array
@@ -151,7 +151,7 @@ easy.addEventListener("click", function() {
     color2Guess.textContent = pickedColor;
     // loop through squares 6 quares:
         // First 3 = assign new color
-        // Last 3 = delete 
+        // Last 3 = delete
     for (let i = 0; i < squares.length; i++) {
         if (colors[i]) {
             squares[i].style.backgroundColor = colors[i];
@@ -175,10 +175,20 @@ hard.addEventListener("click", function() {
         color2Guess.textContent = pickedColor;
         // loop through squares 6 quares:
             // First 3 = assign new color
-            // Last 3 = delete 
+            // Last 3 = delete
         for (let i = 0; i < squares.length; i++) {
                 squares[i].style.backgroundColor = colors[i];
                 squares[i].style.display = "block";
         }
     });
 
+// Cursor
+const cursor = document.querySelector('.custom-cursor')
+document.addEventListener('mousemove', moveCursor);
+
+function moveCursor(e) {
+    let x = e.clientX;
+    let y = e.clientY;
+    cursor.style.left = `${x}px`;
+    cursor.style.top = `${y}px`;
+    }

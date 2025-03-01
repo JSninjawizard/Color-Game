@@ -1,16 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-    <div class="custom-cursor"></div>
+    <div id="wrapper">
+        <header>
+            <h2 class="header-title">The great</h2>
+            <h1 class="header-title-rgb">RGB</h1>
+            <h2 class="header-title">Color game</h2>
+        </header>
+
+        <section class="operations">
+            <button class="btn new-game">New Colors</button>
+            <button class="btn hard">Hard</button>
+            <button class="btn medium">Medium</button>
+            <button class="btn easy">Easy</button>
+        </section>
+
+        <main class="container">
+            <div class="container-boxes">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p class="footer-copyright">JSN &#169; <span class="footer-year">2025</span></p>
+            <ul class="footer-links">
+                <div class="footer-links__link">Github</div>
+                <div class="footer-links__link">Linkedin</div>
+            </ul>
+        </footer>
+    </div>
+
+
+
+
+    <!--
     <h1>The Great <br>
         <span class="color2Guess">RGB</span> <br>
-        Color Game</h1>
+        Color Game
+    </h1>
+    <div class="custom-cursor"></div>
     <div id="stripe">
         <button id="reset">New Colors</button>
         <span id="rightOrWrong"></span>
@@ -24,9 +72,10 @@
         <div class="square"></div>
         <div class="square"></div>
         <div class="square"></div>
-    </div>
+    </div> -->
 
 
     <script src="script.js"></script>
 </body>
+
 </html>
