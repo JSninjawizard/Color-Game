@@ -99,7 +99,7 @@ header {
     width: fit-content;
     color: var(--color);
     text-shadow: 4px 4px 2px var(--txt-sha);
-    text-shadow: 4px 4px 2px var(--txt-sha2);
+    text-shadow: 3px 3px 0px var(--txt-sha2);
     transition: text-shadow .2s ease-in;
     text-transform: uppercase;
 }
