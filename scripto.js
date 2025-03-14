@@ -60,25 +60,35 @@ const mediumLevelBoxes = indexes.filter(el => !mediumDiff.includes(el))
 //@ Pick one box from filtered array
 // const easyIndex = Math.floor(Math.random() * easyLevelBoxes.length);
 let easySquare2Guess = easyLevelBoxes[Math.floor(Math.random() * easyLevelBoxes.length)];
+let mediumSquare2Guess = mediumLevelBoxes[Math.floor(Math.random() * mediumLevelBoxes.length)];
+
 
 
 //!Easy Difficulty
-//@(1) Filter 6 boxes from original array
 console.log(indexes);
-console.log(easyDiff.sort());
-console.log(easyLevelBoxes);
-console.log(easySquare2Guess);
+// console.log('EASY');
+// console.log(easyDiff.sort());
+// console.log(easyLevelBoxes);
+// console.log(easySquare2Guess);
+// console.log('--');
+// console.log('--');
+console.log('MED');
+console.log(mediumDiff.sort());
+console.log(mediumLevelBoxes);
+console.log(mediumSquare2Guess);
+
 
 function reset() {
+    wrapper.style.backgroundColor = '#131842'
     boxes.forEach((el) => {
         el.style.opacity = "1";
+        el.style.backgroundColor = '#131842'
     })
 }
 
 boxes.forEach((el, i) => {
     reset()
 })
-  // el.style.backgroundColor = `rgb${ColorRandomizer()}`;
 
   //! Easy fucntionality
   easy.addEventListener("click", () => {
@@ -100,35 +110,30 @@ boxes.forEach((el, i) => {
             }
         })
     })
-
-
-    // easyDiff.filter((x) => {
-    //     if (x === i) {
-    //         el.style.opacity = "0";
-    //     }
-    // })
-
-    // el.style.backgroundColor = `rgb${ColorRandomizer()}`;
-    // easyLevelBoxes.filter((x) )
-    
   });
-
-  // Medium button functionlity
+  
+  //@ Medium button functionlity
   medium.addEventListener("click", () => {
     reset();
-    mediumDiff.filter(x => {
-        if (x === i+1) {
-            console.log(x);
-            console.log(el);
-            el.style.opacity = '0';
-            el.style.backgroundColor = 'white';
-            console.log(el);
 
-        } if (x !== i) {
-            el.style.backgroundColor = `rgb${ColorRandomizer()}`;
-        }
-    });
+    mediumDiff.forEach((el) => {
+        boxes[el].style.opacity = "0.01"; 
+    })
+
+    mediumLevelBoxes.forEach((el) => {
+        boxes[el].style.backgroundColor = `rgb${ColorRandomizer()}`
+        boxes[mediumSquare2Guess]. style.backgroundColor = `rgb${rgbColor}`
+        boxes[el].addEventListener('click', () => {
+            console.log(`el: ${el} was clicked`);
+            if (mediumSquare2Guess === el) {
+                console.log('correct');
+                wrapper.style.backgroundColor = `rgb${rgbColor}`
+                alert('פששש שקורה!!! סחטיין')
+            }
+        })
+    })
   });
+
 
   // Hard button functionlity
   hard.addEventListener("click", () => {
@@ -146,7 +151,7 @@ boxes.forEach((el, i) => {
   // New color functionality
   newGame.addEventListener("click", () => {
     reset();
-    el.style.backgroundColor = `rgb${ColorRandomizer()}`;
+    
   });
 // });
 
