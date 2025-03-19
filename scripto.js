@@ -18,10 +18,22 @@ rgbTitle.innerHTML = rgbColor;
 // Variables
 const wrapper = document.getElementById('wrapper')
 const boxes = document.querySelectorAll(".box");
+const levels = document.querySelectorAll(".level");
 const newGame = document.querySelector(".new-game");
 const easy = document.querySelector(".easy");
 const medium = document.querySelector(".medium");
 const hard = document.querySelector(".hard");
+
+
+// Levels
+levels.forEach((level) => {
+    level.addEventListener('click', () => {
+
+        levels.forEach(el => el.classList.remove('active'))
+
+        level.classList.add('active')
+    })
+})
 
 const indexes = Array.from({ length: boxes.length }, (_, i) => i);
 
@@ -61,7 +73,8 @@ const mediumLevelBoxes = indexes.filter(el => !mediumDiff.includes(el))
 // const easyIndex = Math.floor(Math.random() * easyLevelBoxes.length);
 let easySquare2Guess = easyLevelBoxes[Math.floor(Math.random() * easyLevelBoxes.length)];
 let mediumSquare2Guess = mediumLevelBoxes[Math.floor(Math.random() * mediumLevelBoxes.length)];
-
+let hardSquare2Guess = hardDiff[Math.floor(Math.random() * hardDiff.length)];
+console.log(hardSquare2Guess);
 
 
 //!Easy Difficulty
@@ -72,10 +85,12 @@ console.log(indexes);
 // console.log(easySquare2Guess);
 // console.log('--');
 // console.log('--');
-console.log('MED');
-console.log(mediumDiff.sort());
-console.log(mediumLevelBoxes);
-console.log(mediumSquare2Guess);
+// console.log('MED');
+// console.log(mediumDiff.sort());
+// console.log(mediumLevelBoxes);
+// console.log(mediumSquare2Guess);
+// console.log('--');
+// console.log('--');
 
 
 function reset() {
@@ -132,21 +147,22 @@ boxes.forEach((el, i) => {
             }
         })
     })
-  });
+});
 
 
-  // Hard button functionlity
-  hard.addEventListener("click", () => {
+//! Hard button functionlity
+hard.addEventListener("click", () => {
     reset();
-    hardDiff.filter((x) => {
-      if (x === i + 1) {
-        console.log(x);
-        el.style.backgroundColor = `rgb${ColorRandomizer()}`;
-      } else {
-        // el.style.opacity = '0.1'
-      }
-    });
+    
+    hardDiff.forEach((el) => {
+        boxes[el].style.backgroundColor = `rgb${ColorRandomizer()}`
+        boxes[hardSquare2Guess]. style.backgroundColor = `rgb${rgbColor}`
+
+    })
+
+
   });
+
 
   // New color functionality
   newGame.addEventListener("click", () => {

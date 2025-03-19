@@ -15,4 +15,6 @@ Useful sites:
 
 
 Got stuck
-1. Getting unique number from array
+1. Getting unique number from array - Done!
+2. On each Difficulty (easy, medium) click, re-arrange the way 
+3. When difficlty is clicked -> other difficulties are removed
