@@ -107,7 +107,6 @@ let easyBoxes2Guess
 let easyBoxes2Hide
 let easyBox2Guess
 
-
 function easyRandomize() {
      easyBoxes2Guess = myRandomInts(3, boxes.length);
      easyBoxes2Hide = indexes.filter((el) => !easyBoxes2Guess.includes(el));

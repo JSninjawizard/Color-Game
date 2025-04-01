@@ -15,16 +15,21 @@
 <body>
     <div id="wrapper">
         <header>
-            <h2 class="header-title">The great</h2>
+            <!-- <h2 class="header-title">The great</h2>
             <h1 class="header-title-rgb">RGB <span class="rgb-numbers">(211, 11, 22)</span></h1>
-            <h2 class="header-title">Color game</h2>
+            <h2 class="header-title">Color game</h2> -->
+
+            <h2 class="header-title">The great RGB game</h2>
+            <h1 class="rgb-numbers"></h1>
         </header>
 
         <section class="operations">
-            <button class="btn new-game">New Colors</button>
-            <button class="btn level hard">Hard</button>
-            <button class="btn level medium">Medium</button>
-            <button class="btn level easy">Easy</button>
+            <div class="levels-controller">
+                <!-- <button class="btn new-game">New Colors</button> -->
+                <button class="btn level hard">Hard</button>
+                <button class="btn level medium">Medium</button>
+                <button class="btn level easy">Easy</button>
+            </div>
         </section>
 
         <main class="container">
@@ -49,31 +54,6 @@
             </ul>
         </footer>
     </div>
-
-
-
-
-    <!--
-    <h1>The Great <br>
-        <span class="color2Guess">RGB</span> <br>
-        Color Game
-    </h1>
-    <div class="custom-cursor"></div>
-    <div id="stripe">
-        <button id="reset">New Colors</button>
-        <span id="rightOrWrong"></span>
-        <button id="easy">Easy</button>
-        <button class="selected" id="hard">Hard</button>
-    </div>
-    <div id="container">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-    </div> -->
-
 
     <script src="scripto.js"></script>
 </body>
