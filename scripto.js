@@ -148,11 +148,20 @@ function newColor () {
 }
 
 
+const timer = document.querySelector('.container-timer')
+const boxContainer = document.querySelector('.container')
+
 //! Easy fucntionality
 easy.addEventListener("click", () => {
   reset();
   easyRandomize();
   newColor()
+
+  timer.style.display = 'grid'
+//   timer.style.transition = "all 2s";
+
+
+
   //   easyDiff.forEach((el) => {
   //     boxes[el].style.opacity = "0.01";
   //   });
