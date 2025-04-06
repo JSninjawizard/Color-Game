@@ -149,10 +149,12 @@ function newColor () {
 
 
 const timer = document.querySelector('.container-timer')
-const boxContainer = document.querySelector('.container')
+const boxContainer = document.querySelector('.main-container')
 
 //! Easy fucntionality
 easy.addEventListener("click", () => {
+  boxContainer.style.gridTemplateColumns = "1fr 2fr 1fr";
+  boxContainer.style.transition = '300ms'
   reset();
   easyRandomize();
   newColor()
