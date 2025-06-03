@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,76 +11,80 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div id="wrapper">
-        <header>
-            <div class="header-title">
-                <h2 class="header-text">The great RGB game</h2>
+<div id="wrapper">
+    <header>
+        <div class="header-title">
+            <div class="header-title--text">The great RGB game</div>
+        </div>
+        <div class="header-rgb-color">
+            <div class="rgb-numbers">(255, 255, 255)</div>
+        </div>
+    </header>
+
+    <section class="operations">
+        <div class="levels-controller">
+            <!-- <button class="btn new-game">New Colors</button> -->
+            <button class="btn level hard">Hard</button>
+            <button class="btn level medium">Medium</button>
+            <button class="btn level easy">Easy</button>
+        </div>
+    </section>
+
+    <main class="container">
+        <aside class="container-timer">
+            <div class="container-timer__title">Timer:</div>
+            <div class="container-timer__clock">
+                <div class="container-timer__clock--seconds">03</div>
+                <div class="container-timer--divider">:</div>
+                <div class="container-timer--milliseconds">00</div>
             </div>
-            <div class="header-rgb-color">
-                <h1 class="rgb-numbers"></h1>
+        </aside>
+
+        <div class="container-boxes">
+            <div class="container-boxes--wrapper">
+                <div class="container-boxes--wrapper__box"></div>
+                <div class="container-boxes--wrapper__box"></div>
+                <div class="container-boxes--wrapper__box"></div>
+                <div class="container-boxes--wrapper__box"></div>
+                <div class="container-boxes--wrapper__box"></div>
+                <div class="container-boxes--wrapper__box"></div>
+                <div class="container-boxes--wrapper__box"></div>
+                <div class="container-boxes--wrapper__box"></div>
+                <div class="container-boxes--wrapper__box"></div>
             </div>
-        </header>
+        </div>
 
-        <section class="operations">
-            <div class="levels-controller">
-                <!-- <button class="btn new-game">New Colors</button> -->
-                <button class="btn level hard">Hard</button>
-                <button class="btn level medium">Medium</button>
-                <button class="btn level easy">Easy</button>
-            </div>
-        </section>
-
-        <main class="container">
-            <div class="container-timer">
-                <div class="timer-title">Timer</div>
-
-                <div class="timer">
-                    <div class="timer-seconds">03</div>
-                    <div class="timer-divider">:</div>
-                    <div class="timer-milliseconds">00</div>
-                </div>
-            </div>
-
-            <div class="container-boxes">
-
-                    <div class="boxes-wrapper">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-
-            </div>
-
-            <div class="container-scores">
-                <div class="scores-title">Scores:</div>
-                <ul class="scores-list">
-                    <li class="scores-list__record">02:43</li>
-                    <li class="scores-list__record">01:43</li>
-                </ul>
-            </div>
-
-        </main>
-
-        <footer>
-            <p class="footer-copyright">JSN &#169; <span class="footer-year">2025</span></p>
-            <ul class="footer-links">
-                <div class="footer-links__link">Github</div>
-                <div class="footer-links__link">Linkedin</div>
+        <div class="container-scores">
+            <div class="container-scores--title">Scores:</div>
+            <ul class="container-scores--scores-list">
+                <li class="scores-list__record">02:43</li>
+                <li class="scores-list__record">01:43</li>
+                <li class="scores-list__record">00:43</li>
+                <li class="scores-list__record">00:43</li>
+                <li class="scores-list__record">00:43</li>
+                <li class="scores-list__record">00:43</li>
+                <li class="scores-list__record">00:43</li>
+                <li class="scores-list__record">00:43</li>
+                <!-- <li class="scores-list__record">04:43</li> -->
+                <!-- <li class="scores-list__record">05:43</li> -->
             </ul>
-        </footer>
-    </div>
+        </div>
+    </main>
 
-    <script src="scripto.js"></script>
+    <footer>
+        <p class="footer-copyright">JSN &#169; <span class="footer-year">2025</span></p>
+        <ul class="footer-links">
+            <div class="footer-links__link">Github</div>
+            <div class="footer-links__link">Linkedin</div>
+        </ul>
+    </footer>
+</div>
+
+<body>
+
 </body>
 
 </html>
