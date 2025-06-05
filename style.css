@@ -17,6 +17,7 @@ body {
 
 #wrapper {
   background-color: orange;
+  background-color: #131842;
   height: 100vh;
   display: grid;
   grid-template-columns: 2vw repeat(10, minmax(min-content, 1fr)) 2vw;
@@ -27,11 +28,12 @@ body {
 }
 
 header {
-  background-color: lightblue;
+  /* background-color: lightblue; */
   grid-area: h;
   font-family: "Poppins", serif;
   text-transform: uppercase;
   text-align: center;
+  color: #FBF6E2;
 }
 
 .header-title--text {
@@ -40,9 +42,10 @@ header {
 }
 
 .header-rgb-color {
-  background-color: burlywood;
+  /* background-color: burlywood; */
   font-weight: 400;
   font-size: clamp(40rem, 8vw, 80rem);
+  color: #FF9F00;
 }
 
 .operations {
